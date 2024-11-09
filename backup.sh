@@ -9,7 +9,7 @@ s3() {
 }
 
 s3api() {
-    aws s3api "$1" --region "$AWS_REGION" --bucket "$S3_BUCKET_NAME" "${@:2}"
+    aws s3api "$1" --endpoint "$AWS_ENDPOINT_URL_S3" --region "$AWS_REGION" --bucket "$S3_BUCKET_NAME" "${@:2}"
 }
 
 bucket_exists() {
