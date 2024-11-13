@@ -1,8 +1,6 @@
 FROM amazon/aws-cli:latest
 ARG POSTGRES_VERSION
 
-USER default
-
 RUN yum install -y gzip postgresql17
 
 WORKDIR /scripts
