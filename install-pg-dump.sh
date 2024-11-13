@@ -15,8 +15,8 @@ fi
 
 cat <<EOF > /etc/yum.repos.d/pgdg.repo
 [pgdg$POSTGRES_VERSION]
-name=PostgreSQL $POSTGRES_VERSION for RHEL/CentOS 9 - x86_64
-baseurl=http://download.postgresql.org/pub/repos/yum/$POSTGRES_VERSION/redhat/rhel-9-x86_64
+name=PostgreSQL $POSTGRES_VERSION for RHEL/CentOS 8 - x86_64
+baseurl=http://download.postgresql.org/pub/repos/yum/$POSTGRES_VERSION/redhat/rhel-8-x86_64
 enabled=1
 gpgcheck=0
 EOF
