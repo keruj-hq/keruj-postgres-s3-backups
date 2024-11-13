@@ -1,8 +1,9 @@
 FROM leplusorg/aws-cli:latest
 ARG POSTGRES_VERSION
 
-RUN yum update -y \
-    && yum install -y gzip libreadline glib* lz4-libs 
+USER default
+
+RUN yum install -y gzip libreadline glib* lz4-libs 
 
 WORKDIR /scripts
 COPY install-pg-dump.sh .
