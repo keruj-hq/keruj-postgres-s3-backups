@@ -1,9 +1,8 @@
 FROM amazon/aws-cli:latest
 ARG POSTGRES_VERSION
 
-RUN dnf upgrade -y --releasever=2023.6.20241010
 RUN yum update -y \
-    && yum install -y gzip
+    && yum install -y gzip libreadline glib* lz4-libs 
 
 WORKDIR /scripts
 COPY install-pg-dump.sh .
