@@ -1,9 +1,9 @@
-FROM leplusorg/aws-cli:latest
+FROM amazon/aws-cli:latest
 ARG POSTGRES_VERSION
 
 USER default
 
-RUN yum install -y gzip libreadline glib* lz4-libs 
+RUN yum install -y gzip postgresql17
 
 WORKDIR /scripts
 COPY install-pg-dump.sh .
