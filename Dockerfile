@@ -1,4 +1,4 @@
-FROM amazon/aws-cli:latest
+FROM leplusorg/aws-cli:latest
 ARG POSTGRES_VERSION
 
 RUN yum update -y \
