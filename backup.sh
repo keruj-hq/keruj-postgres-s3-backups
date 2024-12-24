@@ -5,11 +5,11 @@ set -o errexit -o nounset -o pipefail
 export AWS_PAGER=""
 
 s3() {
-    aws s3 --region "$AWS_REGION" "$@"
+    aws s3 --endpoint "$AWS_ENDPOINT_URL_S3" "$@"
 }
 
 s3api() {
-    aws s3api "$1" --endpoint "$AWS_ENDPOINT_URL_S3" --region "$AWS_REGION" --bucket "$S3_BUCKET_NAME" "${@:2}"
+    aws s3api "$1" --endpoint "$AWS_ENDPOINT_URL_S3" --bucket "$S3_BUCKET_NAME" "${@:2}"
 }
 
 bucket_exists() {
